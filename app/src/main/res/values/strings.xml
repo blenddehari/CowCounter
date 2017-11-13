@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CowCounter</string>
+    <string name="editText_id">id</string>
+    <string name="editText_breed">breed</string>
 </resources>
