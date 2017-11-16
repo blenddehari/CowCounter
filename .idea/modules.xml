@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CowCounter.iml" filepath="$PROJECT_DIR$/CowCounter.iml" />
-      <module fileurl="file://C:\Users\Jiyeon\Desktop\공부\3학년2학기 in Bamberg\Mobile Software Systems(MOBI-MSS-B)\android\CowCounter\CowCounter.iml" filepath="C:\Users\Jiyeon\Desktop\공부\3학년2학기 in Bamberg\Mobile Software Systems(MOBI-MSS-B)\android\CowCounter\CowCounter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Jiyeon\Desktop\공부\3학년2학기 in Bamberg\Mobile Software Systems(MOBI-MSS-B)\android\CowCounter\app\app.iml" filepath="C:\Users\Jiyeon\Desktop\공부\3학년2학기 in Bamberg\Mobile Software Systems(MOBI-MSS-B)\android\CowCounter\app\app.iml" />
     </modules>
   </component>
 </project>
