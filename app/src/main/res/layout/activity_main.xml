@@ -67,7 +67,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="20dp"
         android:layout_toLeftOf="@+id/button_clear"
         android:layout_toStartOf="@+id/button_clear"
@@ -83,90 +83,99 @@
         android:layout_alignBottom="@+id/button_add"
         android:layout_alignEnd="@+id/editText_id"
         android:layout_alignRight="@+id/editText_id"
+        android:layout_marginRight="0dp"
         android:text="REJ"
         android:textColor="@android:color/holo_red_dark"
         android:textStyle="bold" />
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_add"
-        android:layout_alignLeft="@+id/button_add"
-        android:layout_alignStart="@+id/button_add"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="43dp"
-        android:id="@+id/scrollView2">
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="85dp"
+        android:layout_marginTop="210dp">
 
-        <TableLayout
+        <ScrollView
+            android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/breedtable"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp">
 
-            >
+            <TableLayout
+                android:id="@+id/breedtable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-            <TableRow>
-                <TextView
-                    android:id="@+id/textview1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="breed"
-                    android:textAlignment="center"
-                    android:background="@drawable/table_border"
-                    android:textStyle="bold"
-                    />
+                >
 
-                <TextView
-                    android:id="@+id/textview2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/table_border"
-                    android:text="id"
-                    android:textAlignment="center"
-                    android:textStyle="bold"/>
-            </TableRow>
-            <TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/textview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/table_border"
+                        android:text="breed"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/table_border"
+                        android:text="id"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
                 <TextView
                     android:id="@+id/breed1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textAlignment="center"
                     android:background="@drawable/table_border"
-                    />
+                    android:textAlignment="center" />
+
                 <TextView
                     android:id="@+id/id1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:background="@drawable/table_border"/>
+                    android:background="@drawable/table_border"
+                    android:textAlignment="center" />
             </TableRow>
 
-        </TableLayout>
-    </ScrollView>
+            </TableLayout>
+        </ScrollView>
+    </RelativeLayout>
 
     <TextView
+        android:id="@+id/number_of_cows"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/number_of_cows"
 
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/button_clear"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="88dp"
         android:text="Cows:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button_clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/number_of_cows"
-        android:layout_marginTop="29dp"
-        android:layout_toLeftOf="@+id/button_rej"
-        android:layout_toStartOf="@+id/button_rej"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal|center"
+        android:paddingLeft="0dp"
         android:text="CLEAR"
         android:textColor="@android:color/holo_red_dark"
         android:textStyle="bold" />
