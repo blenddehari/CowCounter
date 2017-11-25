@@ -34,8 +34,8 @@
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginStart="0dp"
-        android:inputType="text"
-        android:text="@string/editText_breed"
+        android:hint="breed"
+        android:inputType="number"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp" />
@@ -51,8 +51,8 @@
         android:layout_marginTop="26dp"
         android:layout_toEndOf="@+id/number_of_cows"
         android:layout_toRightOf="@+id/number_of_cows"
-        android:inputType="text"
-        android:text="@string/editText_id"
+        android:hint="id"
+        android:inputType="number"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp" />
@@ -134,24 +134,6 @@
                         android:textStyle="bold" />
                 </TableRow>
 
-                <TableRow>
-
-                <TextView
-                    android:id="@+id/breed1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/table_border"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/id1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/table_border"
-                    android:textAlignment="center" />
-            </TableRow>
 
             </TableLayout>
         </ScrollView>
