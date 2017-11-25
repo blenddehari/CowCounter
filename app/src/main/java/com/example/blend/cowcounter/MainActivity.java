@@ -18,6 +18,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     public static String LOGGING_TAG;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(LOGGING_TAG, getLocalClassName() + ".onCreate is called!");
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText editText_breed = (EditText) findViewById(R.id.editText_breed);
         final EditText editText_id = (EditText) findViewById(R.id.editText_id);
         final TextView numberOfCows = (TextView) findViewById(R.id.number_of_cows);
+
 
         // clear id and breed fields
         Button RejectButton = (Button) findViewById(R.id.button_rej);
@@ -120,5 +122,22 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    //saving the information on the table after swtching to landscape
+    int cnt=0;
+
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("breed", cnt);
+        outState.putInt("ID", cnt);
+        Log.d(LOGGING_TAG, "onSaveInstanceState");
+    }
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        cnt = savedInstanceState.getInt("breed");
+        cnt = savedInstanceState.getInt ("ID");
+        Log.d(LOGGING_TAG, "onRestoreInstanceState");
     }
 }
