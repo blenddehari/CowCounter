@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CowCounter.iml" filepath="$PROJECT_DIR$/CowCounter.iml" />
+      <module fileurl="file://C:\Users\Medine\Desktop\homework\CowCounter\CowCounter.iml" filepath="C:\Users\Medine\Desktop\homework\CowCounter\CowCounter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Medine\Desktop\homework\CowCounter\app\app.iml" filepath="C:\Users\Medine\Desktop\homework\CowCounter\app\app.iml" />
     </modules>
   </component>
 </project>
