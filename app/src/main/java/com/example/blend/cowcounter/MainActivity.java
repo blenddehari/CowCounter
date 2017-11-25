@@ -84,9 +84,11 @@ public class MainActivity extends AppCompatActivity {
         int id_num = Integer.parseInt(id);
         if (breed_num < 0 || breed_num > 999) {
             Toast.makeText(this, "enter a number with a value between 0 and 999", Toast.LENGTH_SHORT).show();
+            return;
         }
         if (id_num < 0 || id_num > 999) {
             Toast.makeText(this, "enter a number with a value between 0 and 999", Toast.LENGTH_SHORT).show();
+            return;
         }
 
         //making new tabletext
