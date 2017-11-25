@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void updaterow(EditText breedEdit, EditText idEdit, TextView numberOfCows) {
+    public void updaterow(EditText breedEdit, EditText idEdit, final TextView numberOfCows) {
 
-        TableLayout table = (TableLayout) findViewById(R.id.breedtable);
-        TableRow tr = new TableRow(this);
+        final TableLayout table = (TableLayout) findViewById(R.id.breedtable);
+        final TableRow tr = new TableRow(this);
         tr.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.MATCH_PARENT));
 
         TextView tv_breed = new TextView(this);
@@ -108,5 +108,17 @@ public class MainActivity extends AppCompatActivity {
 
         //display number of cows in the table
         numberOfCows.setText("Cows: " + (table.getChildCount() - 1));
+
+        //button CLEAR to remove all added table rows and reset the numberOfCows
+        Button ClearButton = (Button) findViewById(R.id.button_clear);
+        ClearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int childCount = table.getChildCount();
+                table.removeViews(1, childCount-1);
+                numberOfCows.setText("Cows:");
+            }
+
+        });
     }
 }
