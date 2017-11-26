@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -11,155 +12,159 @@
     android:paddingTop="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/text_cowCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="CowCounter"
-        android:textColor="@android:color/black"
-        android:textSize="36sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText_breed"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText_id"
-        android:layout_alignBottom="@+id/editText_id"
-        android:layout_alignLeft="@+id/button_add"
-        android:layout_alignStart="@+id/button_add"
-        android:layout_marginEnd="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginStart="0dp"
-        android:hint="breed"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/editText_id"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text_cowCounter"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/number_of_cows"
-        android:layout_toRightOf="@+id/number_of_cows"
-        android:hint="id"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="16sp" />
-
-
-    <Button
-        android:id="@+id/button_add"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_breed"
-        android:layout_marginBottom="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_toLeftOf="@+id/button_clear"
-        android:layout_toStartOf="@+id/button_clear"
-        android:text="ADD"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button_rej"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button_add"
-        android:layout_alignBottom="@+id/button_add"
-        android:layout_alignEnd="@+id/editText_id"
-        android:layout_alignRight="@+id/editText_id"
-        android:layout_marginRight="0dp"
-        android:text="REJ"
-        android:textColor="@android:color/holo_red_dark"
-        android:textStyle="bold" />
-
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="135dp">
+        android:layout_height="match_parent">
 
-        <ScrollView
-            android:id="@+id/scrollView2"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp">
+            android:layout_height="match_parent">
 
-            <TableLayout
-                android:id="@+id/breedtable"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/text_view_cowcounter"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="CowCounter"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
-                >
+            <EditText
+                android:id="@+id/editText_breed"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="80dp"
+                android:inputType="text" />
 
-                <TableRow>
+            <EditText
+                android:id="@+id/editText_id"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="80dp"
+                android:inputType="text" />
 
-                    <TextView
-                        android:id="@+id/textview1"
+
+            <Button
+                android:id="@+id/button_add"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="130dp"
+                android:text="ADD"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/button_rej"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="130dp"
+                android:text="REJ"
+                android:textColor="@android:color/holo_red_light"
+                android:textStyle="bold"
+
+                />
+
+            <RelativeLayout
+                android:id="@+id/listLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="85dp"
+                android:layout_marginTop="210dp">
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:isScrollContainer="false">
+
+                    <TableLayout
+                        android:id="@+id/table_breed"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/table_border"
-                        android:text="breed"
-                        android:textAlignment="center"
-                        android:textStyle="bold" />
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/textview2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/table_border"
-                        android:text="id"
-                        android:textAlignment="center"
-                        android:textStyle="bold" />
-                </TableRow>
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/textView_breed1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="breed"
+                                android:textAlignment="center"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView_id1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="id"
+                                android:textAlignment="center"
+                                android:textStyle="bold" />
+                        </TableRow>
+
+                        <ListView
+                            android:id="@+id/listView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+                    </TableLayout>
+
+                </ScrollView>
 
 
-            </TableLayout>
-        </ScrollView>
-    </RelativeLayout>
+            </RelativeLayout>
 
-    <TextView
-        android:id="@+id/number_of_cows"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/listLayout"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
 
-        android:layout_above="@+id/button_clear"
-        android:layout_centerHorizontal="true"
-        android:text="Cows:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/text_View_cow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/listiew"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="Cows: "
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/button_clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal|center"
-        android:paddingLeft="0dp"
-        android:text="CLEAR"
-        android:textColor="@android:color/holo_red_dark"
-        android:textStyle="bold" />
+                <Button
 
+                    android:id="@+id/button_clear"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="CLEAR"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
